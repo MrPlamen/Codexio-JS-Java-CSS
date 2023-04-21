@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 12vh;
+    height: 100vh;
+}
+.bar {
+    font-weight: bold;
+    width: 33.33%;
+}
+.second-1 {
+    width: 58.82%;
+}
+.second-2 {
+    width: 33.33%;
+}
+.third-2, .fourth-2 {
+    width: 58.82%;
+}
+.third-1, .fourth-1 {
+    width: 33.33%;
+}
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calc(100vw/15);
+    height: calc(100vh / 5);
+}
+.first-1, .first-2 {
+    background-color: hsl(306.49deg 48.68% 29.8%);
+}
+
+.second-1, .second-2 {
+    background-color: hsl(271.88deg 33.33% 37.65%);
+}
+
+.third-1, .third-2 {
+    background-color: hsl(240deg 29.82% 44.71%);
+}
+
+.fourth-1, .fourth-2 {
+    background-color: hsl(220.35deg 51.13% 43.33%);
+}
+span {
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
