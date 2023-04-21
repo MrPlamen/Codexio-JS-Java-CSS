@@ -36,8 +36,11 @@ function wordsComparison(input) {
             diff += secondLettersCount[key];
         }
     }
-    console.log(diff)
+    
+    return diff;
  
 }
  
-wordsComparison(['codewars', 'hackerrank'])
+const wordInput = ['codewars', 'hackerrank'];
+ 
+console.log(wordsComparison(wordInput));
