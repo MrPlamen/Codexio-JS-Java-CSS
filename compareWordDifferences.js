@@ -18,7 +18,6 @@ function wordsComparison(input) {
     result += (secondWord.length - secondWordFinal.length);
 
     return result;
-
 }
 
 function removeExcessiveLetters(currentCharArray, otherCharArray) {
