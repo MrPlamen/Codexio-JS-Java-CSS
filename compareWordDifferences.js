@@ -7,12 +7,8 @@ function wordsComparison(input) {
     removeExcessiveLetters(firstChars, secondChars);
     removeExcessiveLetters(secondChars, firstChars);
 
-    // These are the resulting words, if needed: 
-
     const firstWordFinal = firstChars.join('');
     const secondWordFinal = secondChars.join('');
-
-    // This is only the number of removed words:
 
     let result = (firstWord.length - firstWordFinal.length);
     result += (secondWord.length - secondWordFinal.length);
