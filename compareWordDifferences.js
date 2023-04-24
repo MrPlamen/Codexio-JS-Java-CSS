@@ -7,32 +7,6 @@ function wordsComparison(input) {
     removeExcessiveLetters(firstChars, secondChars);
     removeExcessiveLetters(secondChars, firstChars);
 
-    function removeExcessiveLetters(currentCharArray, otherCharArray) {
-
-        for (let letter of currentCharArray) {
-            if (!otherCharArray.includes(letter)) {
-
-                removeLetters(currentCharArray, letter);
-
-            } else {
-                let firstCharsOccurences = currentCharArray.filter(x => x == letter).length;
-                let secondCharsOccurences = otherCharArray.filter(x => x == letter).length;
-
-                let differenceInCount = firstCharsOccurences - secondCharsOccurences;
-
-                while (differenceInCount > 0) {
-                    removeLetters(currentCharArray, letter);
-                    differenceInCount--;
-                }
-
-                while (differenceInCount < 0) {
-                    removeLetters(otherCharArray, letter);
-                    differenceInCount++;
-                }
-            }
-        }
-    }
-
     // These are the resulting words, if needed: 
 
     let firstWordFinal = firstChars.join('');
@@ -47,6 +21,37 @@ function wordsComparison(input) {
 
 }
 
+const wordInput = ['codewars', 'hackerrank'];
+
+console.log(wordsComparison(wordInput));
+
+
+function removeExcessiveLetters(currentCharArray, otherCharArray) {
+
+    for (let letter of currentCharArray) {
+        if (!otherCharArray.includes(letter)) {
+
+            removeLetters(currentCharArray, letter);
+
+        } else {
+            let firstCharsOccurences = currentCharArray.filter(x => x == letter).length;
+            let secondCharsOccurences = otherCharArray.filter(x => x == letter).length;
+
+            let differenceInCount = firstCharsOccurences - secondCharsOccurences;
+
+            while (differenceInCount > 0) {
+                removeLetters(currentCharArray, letter);
+                differenceInCount--;
+            }
+
+            while (differenceInCount < 0) {
+                removeLetters(otherCharArray, letter);
+                differenceInCount++;
+            }
+        }
+    }
+}
+
 function removeLetters(array, letter) {
 
     let index = array.indexOf(letter);
@@ -54,6 +59,3 @@ function removeLetters(array, letter) {
 
 }
 
-const wordInput = ['codewars', 'hackerrank'];
-
-console.log(wordsComparison(wordInput));
