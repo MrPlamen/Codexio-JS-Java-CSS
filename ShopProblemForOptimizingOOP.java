@@ -6,7 +6,7 @@ class Shop {
 
     private Shop() {}
 
-    private static Shop getInstance() {
+    public static Shop getInstance() {
         if (instance == null) {
             instance = new Shop();
         }
